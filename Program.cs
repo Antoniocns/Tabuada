@@ -6,15 +6,16 @@ namespace Tabuada
     {
         static void Main(string[] args)
         {
-            int formula, contador, numero;
+            int numero, resultado;
 
-            Console.Write("Digite um número : ");
-            numero = Int32.Parse(Console.ReadLine());
+            Console.WriteLine("Digite um número para a Tabuada");
+            numero = Convert.ToUInt16(Console.ReadLine());
+            Console.WriteLine();
 
-            for (contador = 1; contador <= 10; ++contador)
+            for (int x = 0; x <= 10; x++)
             {
-                formula = numero * contador;
-                Console.WriteLine(numero + " X " + contador + " = " + formula);
+                resultado = numero * x;
+                Console.WriteLine($"{x} * {numero}  = {resultado}");
             }
             Console.ReadLine();
         }
